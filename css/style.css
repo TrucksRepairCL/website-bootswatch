@@ -12,8 +12,28 @@ a:hover {
   width: 15%;
 }
 
+video {
+  object-fit: cover;
+}
+
+
+
 .container {
   max-width: 1500px;
+}
+
+
+.min-vh-md-40 {
+  min-height: 40vh;
+}
+
+.heroc-image {
+  --bg-hero: url("../img/electronica.jpg");
+  background-image: var(--bg-hero);
+  background-repeat: no-repeat;    
+  background-position: center;  
+  background-size: cover; 
+  
 }
 
 .whatsapp {
@@ -22,7 +42,6 @@ a:hover {
   height:60px;
   bottom:40px;
   right:40px;
-
   background-color:#25d366;
   color:#FFF;
   border-radius:50px;
@@ -62,6 +81,39 @@ body::-webkit-scrollbar-thumb {
 .main-content {
     padding-bottom: 450px;
 }
+
+.hero-image {
+  background-image: url('../img/taller.png');
+  background-size: cover; /* Asegura que la imagen cubra todo el espacio */
+  background-position: center; /* Centra la imagen */
+  min-height: 50vh;
+  position: relative; /* Es importante para posicionar el overlay */
+  display: flex; /* Para centrar verticalmente el contenido */
+  align-items: center; /* Para centrar verticalmente el contenido */
+  justify-content: center; /* Para centrar horizontalmente el contenido */
+}
+
+.hero-image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Color negro con 50% de opacidad */
+  z-index: 1; /* Asegura que el overlay esté por encima de la imagen */
+
+}
+
+/* Ajustes para el contenido de texto y botones */
+.hero-image .py-5, .heroc-image .py-5 {
+  z-index: 2; /* Asegura que el contenido esté por encima del overlay */
+}
+
+.hero-image .btn.border {
+  border-color: #fff !important; /* Asegura que el borde de los botones sea blanco */
+}
+
+
 
 footer {
     /* background: #28242c; */
