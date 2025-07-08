@@ -1,1 +1,1 @@
-agregado 5 secciones, header con video y services con image
+agregado secc quienes somos y contacto

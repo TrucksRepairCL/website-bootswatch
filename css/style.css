@@ -8,32 +8,26 @@ a:hover {
   text-decoration: none;
 }
 
-.logo_merc {
-  width: 15%;
-}
 
 video {
   object-fit: cover;
 }
 
-
-
 .container {
   max-width: 1500px;
+}
+
+.container-md {
+  max-width: 60%;  
+}
+
+.container-md p, .container-md li{
+  font-size: 22px;
 }
 
 
 .min-vh-md-40 {
   min-height: 40vh;
-}
-
-.heroc-image {
-  --bg-hero: url("../img/electronica.jpg");
-  background-image: var(--bg-hero);
-  background-repeat: no-repeat;    
-  background-position: center;  
-  background-size: cover; 
-  
 }
 
 .whatsapp {
@@ -65,25 +59,17 @@ main {
   min-height: 80vh;
 }
 
-.main-content {
-    padding-bottom: 400px;
-}
-
-body::-webkit-scrollbar {
-  width: 12px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #222222;
-  border-radius: 3px;
-}
-
-.main-content {
-    padding-bottom: 450px;
+.heroc-image {
+  --bg-hero: url("../img/electronica.jpg");
+  background-image: var(--bg-hero);
+  background-repeat: no-repeat;    
+  background-position: center;  
+  background-size: cover;   
 }
 
 .hero-image {
-  background-image: url('../img/taller.png');
+  --bg-hero: url("../img/taller.png");
+  background-image: var(--bg-hero);
   background-size: cover; /* Asegura que la imagen cubra todo el espacio */
   background-position: center; /* Centra la imagen */
   min-height: 50vh;
@@ -91,6 +77,12 @@ body::-webkit-scrollbar-thumb {
   display: flex; /* Para centrar verticalmente el contenido */
   align-items: center; /* Para centrar verticalmente el contenido */
   justify-content: center; /* Para centrar horizontalmente el contenido */
+}
+
+.article__element--mh-60 {
+  min-height: 60vh;
+  align-items: end;
+  justify-content: end; 
 }
 
 .hero-image__overlay {
@@ -104,32 +96,46 @@ body::-webkit-scrollbar-thumb {
 
 }
 
-/* Ajustes para el contenido de texto y botones */
 .hero-image .py-5, .heroc-image .py-5 {
-  z-index: 2; /* Asegura que el contenido esté por encima del overlay */
+  z-index: 2; 
 }
 
 .hero-image .btn.border {
-  border-color: #fff !important; /* Asegura que el borde de los botones sea blanco */
+  border-color: #fff !important; 
 }
-
-
 
 footer {
-    /* background: #28242c; */
-    background: rgba(39,38,43,255);
-    padding-bottom: 20px;
+  padding-bottom: 50px;
 }
+
+section, article {
+  padding-top: 40px;
+}
+
+.pt-min-20 {
+  padding-top: 0px;
+}
+
+article {
+  padding-top: 150px;
+}
+
+
+
+section article p {
+  text-align: justify;
+}
+
 
 
 /** MOBILE RESPONSIVE */
 
 @media screen and (max-width:780px) {
 
-    .main-content{
-        padding: 0;
-        padding-bottom: 220px;
-    }
+  .navbar img {
+    width: 120px;
+  }
+
 
 }
 
